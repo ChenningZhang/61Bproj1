@@ -1,0 +1,88 @@
+Beginning Part I.
+Performing 5 boxBlur(1) calls, then one boxBlur(3) calls on a 11x15 image.
+  Test successful.
+
+Performing a sobelEdges call on feathers.tiff.
+  Reading feathers.tiff.
+  Test successful.
+
+Total Part I score:  8 out of 8.
+Total Autogradable score so far:  8 out of 8.
+
+Beginning Part II.
+Performing a 4x4 RunLengthEncoding-to-PixImage test.
+  Calling the six-parameter constructor.
+  Reading back the encoding through nextRun.
+  Calling toPixImage.
+
+Total Part II score:  5 out of 5.
+Total Autogradable score so far:  13 out of 13.
+
+Beginning Part III.
+Run-length encoding a PixImage.
+  Reading highcontrast.tiff.
+  Calling the one-parameter RunLengthEncoding constructor.
+    Run # 28 should be 8, 39, 39, 39.  (Runs indexed from zero.)
+    Instead, it's 12, 39, 39, 47
+  Converting back to a PixImage.
+
+Total Part III score:  1 out of 4.
+Total Autogradable score so far:  14 out of 17.
+
+Beginning Part IV.
+Setting pixels in your 4x4 run-length encoding (from Part II).
+  Setting (3, 2) to [red=5, green=10, blue=136].
+  Setting (0, 3) to [red=5, green=10, blue=136].
+    Run # 4 should be 2, 5, 5, 10.  (Runs indexed from zero.)
+    Instead, it's 1, 5, 10, 136
+    Here is your encoding:
+[3,0,20,42][2,1,18,42][5,2,16,42][1,3,14,137][1,5,10,136][1,5,10,136][3,5,10,137][0,-1,-1,-1][3,0,20,42][2,1,18,42][5,2,16,42][1,3,14,137][1,5,10,136][1,5,10,136][3,5,10,137][0,-1,-1,-1][3,0,20,42][2,1,18,42][5,2,16,42][1,3,14,137][1,5,10,136][1,5,10,136][3,5,10,137][0,-1,-1,-1][3,0,20,42][2,1,18,42][5,2,16,42][1,3,14,137][1,5,10,136][1,5,10,136]
+    Here is the correct encoding:
+3x[red=0,green=20,blue=42]
+2x[red=1,green=18,blue=42]
+5x[red=2,green=16,blue=42]
+1x[red=3,green=14,blue=137]
+2x[red=5,green=10,blue=136]
+3x[red=5,green=10,blue=137]
+  Setting (1, 0) to [red=1, green=18, blue=42].
+    Run # 0 should be 1, 0, 0, 20.  (Runs indexed from zero.)
+    Instead, it's 3, 0, 20, 42
+    Here is your encoding:
+[3,0,20,42][1,1,18,42][1,1,18,42][5,2,16,42][1,3,14,137][1,5,10,136][1,5,10,136][3,5,10,137][0,-1,-1,-1][3,0,20,42][1,1,18,42][1,1,18,42][5,2,16,42][1,3,14,137][1,5,10,136][1,5,10,136][3,5,10,137][0,-1,-1,-1][3,0,20,42][1,1,18,42][1,1,18,42][5,2,16,42][1,3,14,137][1,5,10,136][1,5,10,136][3,5,10,137][0,-1,-1,-1][3,0,20,42][1,1,18,42][1,1,18,42]
+    Here is the correct encoding:
+1x[red=0,green=20,blue=42]
+1x[red=1,green=18,blue=42]
+1x[red=0,green=20,blue=42]
+2x[red=1,green=18,blue=42]
+5x[red=2,green=16,blue=42]
+1x[red=3,green=14,blue=137]
+2x[red=5,green=10,blue=136]
+3x[red=5,green=10,blue=137]
+  Setting (2, 0) to [red=1, green=18, blue=42].
+    Run # 0 should be 1, 0, 0, 20.  (Runs indexed from zero.)
+    Instead, it's 3, 0, 20, 42
+    Here is your encoding:
+[3,0,20,42][0,1,18,42][1,1,18,42][1,1,18,42][5,2,16,42][1,3,14,137][1,5,10,136][1,5,10,136][3,5,10,137][0,-1,-1,-1][3,0,20,42][0,1,18,42][1,1,18,42][1,1,18,42][5,2,16,42][1,3,14,137][1,5,10,136][1,5,10,136][3,5,10,137][0,-1,-1,-1][3,0,20,42][0,1,18,42][1,1,18,42][1,1,18,42][5,2,16,42][1,3,14,137][1,5,10,136][1,5,10,136][3,5,10,137][0,-1,-1,-1]
+    Here is the correct encoding:
+1x[red=0,green=20,blue=42]
+4x[red=1,green=18,blue=42]
+5x[red=2,green=16,blue=42]
+1x[red=3,green=14,blue=137]
+2x[red=5,green=10,blue=136]
+3x[red=5,green=10,blue=137]
+  Setting (0, 0) to [red=1, green=18, blue=42].
+    Run # 0 should be 5, 1, 1, 18.  (Runs indexed from zero.)
+    Instead, it's 1, 1, 18, 42
+    Here is your encoding:
+[1,1,18,42][2,0,20,42][0,1,18,42][1,1,18,42][1,1,18,42][5,2,16,42][1,3,14,137][1,5,10,136][1,5,10,136][3,5,10,137][0,-1,-1,-1][1,1,18,42][2,0,20,42][0,1,18,42][1,1,18,42][1,1,18,42][5,2,16,42][1,3,14,137][1,5,10,136][1,5,10,136][3,5,10,137][0,-1,-1,-1][1,1,18,42][2,0,20,42][0,1,18,42][1,1,18,42][1,1,18,42][5,2,16,42][1,3,14,137][1,5,10,136]
+    Here is the correct encoding:
+5x[red=1,green=18,blue=42]
+5x[red=2,green=16,blue=42]
+1x[red=3,green=14,blue=137]
+2x[red=5,green=10,blue=136]
+3x[red=5,green=10,blue=137]
+
+Total Part IV score:  0 out of 2.
+Total Autogradable score:  14 out of 19.
+
+(Note:  1 hand-graded point will be for your check() method.)

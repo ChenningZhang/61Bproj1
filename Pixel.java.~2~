@@ -1,0 +1,32 @@
+/* Pixel.java */
+
+public class Pixel {
+
+    private short red;
+    private short green;
+    private short blue;
+
+    public Pixel() {
+        red = 0;
+        green = 0;
+        blue = 0;
+    }
+
+    public short getRed() {
+        return red;
+    }
+
+    public short getGreen() {
+        return green;
+    }
+
+    public short getBlue() {
+        return blue;
+    }
+
+    public void setPixel(short r, short g, short b) {
+        red = r;
+        green = g;
+        blue = b;
+    }
+}
